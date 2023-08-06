@@ -24,8 +24,8 @@ class KnowledgeQueryTool(BaseTool):
     args_schema: Type[BaseModel] = KnowledgeInput
     description: str = "帮助用户检索知识库"
 
-    def _execute(self, food_name: str = None):
-        return _query_knowledge(food_name)
+    def _execute(self, query: str = None):
+        return _query_knowledge(query)
 
 
 class CreateReportInput(BaseModel):
